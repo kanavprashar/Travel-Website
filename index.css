@@ -1,3 +1,54 @@
-.navbar{
- box-shadow:1px -2px 6px 4px ;
-}
+
+        /* Navbar styling to overlay on the carousel */
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 10; /* Ensure it stays above the carousel */
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+        }
+
+        .navbar a {
+            color: black; /* Black text for visibility */
+        }
+
+        .navbar a:hover {
+            color: #007bff; /* Blue hover color for links */
+        }
+
+        /* Carousel occupies full viewport height */
+        .carousel {
+            height: 100vh; /* Full viewport height */
+        }
+
+        .carousel-inner,
+        .carousel-item {
+            height: 100%; /* Force the height to fill the carousel container */
+        }
+
+        .carousel-item img {
+            height: 100%; /* Fill the height of the carousel-item */
+            width: 100%; /* Stretch to full width */
+            object-fit: cover; /* Crop the image to prevent distortion */
+        }
+
+        /* Carousel captions styling */
+        .carousel-caption {
+
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .carousel-caption h5,
+        .carousel-caption p {
+            color: #fff;
+        }
+        .footer {
+          text-align: center;
+          color: white;
+          padding: 10px;
+          background-color: rgba(0, 0, 0, 0.5);
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+      }

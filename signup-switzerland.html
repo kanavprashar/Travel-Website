@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up for Switzerland</title>
+  <title>Book Your Greece Adventure</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
-      background-image: url('https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg');
+      background-image: url('https://images.pexels.com/photos/164515/pexels-photo-164515.jpeg'), 
+                        url('https://images.pexels.com/photos/4611986/pexels-photo-4611986.jpeg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -21,7 +23,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.5);
       z-index: 1;
     }
 
@@ -38,14 +40,14 @@
 
     h1 {
       font-size: 2.5rem;
-      font-weight: 700;
-      color: #007bff;
+      font-weight: bold;
+      color: #0077b6;
       text-align: center;
       margin-bottom: 30px;
     }
 
     label {
-      font-weight: 600;
+      font-weight: bold;
       margin-top: 15px;
     }
 
@@ -54,14 +56,14 @@
     }
 
     .btn-custom {
-      background-color: #007bff;
+      background-color: #0077b6;
       color: white;
       font-weight: bold;
       transition: all 0.3s ease;
     }
 
     .btn-custom:hover {
-      background-color: #0056b3;
+      background-color: #005f89;
     }
 
     .form-footer {
@@ -71,49 +73,72 @@
     }
 
     .form-footer a {
-      color: #007bff;
+      color: #0077b6;
       text-decoration: none;
     }
 
     .form-footer a:hover {
       text-decoration: underline;
     }
+    
+    /* Responsive adjustments */
+    @media (max-width: 576px) {
+        h1 {
+            font-size: 2rem; /* Smaller heading on mobile */
+        }
+        .form-container {
+            padding: 20px; /* Less padding on mobile */
+        }
+    }
+   
   </style>
 </head>
 <body>
   <div class="overlay"></div>
+  
   <div class="container">
     <div class="form-container">
-      <h1>Book Your Switzerland Adventure</h1>
-      <form action="#" method="POST">
+      <h1>Book Your Greece Adventure</h1>
+      
+      <form action="http://localhost:5822/api/booking" method="POST">
         <div class="mb-3">
           <label for="fullName" class="form-label">Full Name</label>
           <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
         </div>
+        
         <div class="mb-3">
           <label for="email" class="form-label">Email Address</label>
           <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
         </div>
+
         <div class="mb-3">
           <label for="phone" class="form-label">Phone Number</label>
           <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
         </div>
+
         <div class="mb-3">
           <label for="travelers" class="form-label">Number of Travelers</label>
-          <input type="number" class="form-control" id="travelers" name="travelers" placeholder="Enter the number of travelers" required>
+          <input type="number" class="form-control" id="travelers" name="travelers" placeholder="Enter the number of travelers" required min="1">
         </div>
+
         <div class="mb-3">
           <label for="date" class="form-label">Preferred Travel Date</label>
           <input type="date" class="form-control" id="date" name="date" required>
         </div>
+
         <button type="submit" class="btn btn-custom btn-lg w-100 mt-4">Confirm Booking</button>
+        
       </form>
+
       <div class="form-footer">
         <p>Have questions? <a href="contact.html">Contact us</a></p>
       </div>
+      
     </div>
+    
   </div>
+
   
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

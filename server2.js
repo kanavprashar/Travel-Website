@@ -1,7 +1,8 @@
-import express from 'express'; 
+import express from 'express';
+import bodyParser from 'body-parser'; // Import the entire body-parser package
 import { connect, Schema, model } from 'mongoose';
-import bodyParser from 'body-parser';
-const { json, urlencoded } = bodyParser;
+
+const { json, urlencoded } = bodyParser; // Destructure json and urlencoded
 
 const app = express();
 
